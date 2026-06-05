@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Psykolog.no — Kommer snart</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,600;1,400;1,600&family=Geist:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      font-family: 'Geist', sans-serif;
+    }
+
+    .card {
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(135.46deg, #F2E6D6 0%, #EFC9B8 100%);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    /* ── TOP LEAF IMAGE SLOT ── */
+    .leaf-top {
+      width: 100%;
+      height: 120px;
+      position: relative;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+    .leaf-top img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+    }
+
+    /* ── BOTTOM LEAF IMAGE SLOT ── */
+    .leaf-bottom {
+      width: 100%;
+      height: 120px;
+      position: relative;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+    .leaf-bottom img {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: bottom center;
+      display: block;
+    }
+
+    /* ── MAIN CONTENT ── */
+    .card-content {
+      max-width: 800px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+
+    /* ── ILLUSTRATION — fixed centering ── */
+    .illustration {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 22px;
+    }
+    .illustration img {
+      width: 394px;
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+    /* Newsreader for the italic headline */
+    .headline {
+      font-family: 'Newsreader', serif;
+      font-style: italic;
+      font-size: clamp(30px, 6vw, 70px);
+      font-weight: 400;
+      color: #2d1a12;
+      margin-bottom: 10px;
+    }
+
+    /* Geist for all other text */
+    .subtitle {
+      font-family: 'Geist', sans-serif;
+      color: #b85c3a;
+      font-size: clamp(13px, 2.2vw, 26px);
+      font-weight: 400;
+      margin-bottom: 22px;
+    }
+
+    .body-text {
+      font-family: 'Geist', sans-serif;
+      font-size: clamp(12px, 1.8vw, 18px);
+      color: #3E342D;
+      line-height: 1.4;
+      margin-bottom: 16px;
+    }
+
+    .interim-link {
+      font-family: 'Geist', sans-serif;
+      font-size: 20px;
+      color: #b85c3a;
+      font-style: italic;
+      margin-bottom: 18px;
+    }
+
+    .cta-btn {
+      background: #fff;
+      border: none;
+      border-radius: 50px;
+      padding: 20px 30px;
+      font-size: 16px;
+      color: #3E342D;
+      cursor: pointer;
+      font-family: 'Geist', sans-serif;
+      letter-spacing: 0.01em;
+      margin-bottom: 30px;
+      transition: background 0.2s;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .cta-btn:hover { background: #f5f0ee; }
+
+    /* ── BRAND IMAGE — fixed sizing & centering ── */
+    .brand {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+    .brand img {
+      width:319px;
+      height: 62px;
+      width: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+    .socials {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 4px;
+    }
+    .social-icon {
+      background: #fff;
+      border-radius: 50%;
+      border: 1.5px solid rgba(180, 90, 50, 0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #D88B72;
+      font-size: 15px;
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+      background: transparent;
+      text-decoration: none;
+    }
+
+    .social-icon img {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .social-icon:hover {
+      background: rgba(180, 90, 50, 0.12);
+      border-color: rgba(180, 90, 50, 0.6);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      .card-content { padding: 10px 20px 10px; }
+      .illustration img { width: 280px; }
+      .leaf-top, .leaf-bottom { height: 80px; }
+      .social-icon img {
+        width: 30px;
+        height: 30px;
+        object-fit: contain;
+        display: block;
+      }
+      .brand img {
+        width:250px;
+        height: 40px;
+        width: auto;
+        object-fit: contain;
+        display: block;
+      }
+      .interim-link {
+        font-family: 'Geist', sans-serif;
+        font-size: 16px;
+        color: #b85c3a;
+        font-style: italic;
+        margin-bottom: 18px;
+      }
+    }
+    @media (max-width: 380px) {
+      .leaf-top, .leaf-bottom { height: 65px; }
+      .illustration img { width: 220px; }
+      .socials { gap: 7px; }
+      .social-icon { width: 32px; height: 32px; font-size: 13px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+
+    <!-- TOP LEAF IMAGE — src="images/Top-leafs.webp" -->
+    <div class="leaf-top">
+      <img src="images/Top-leafs.webp" alt="" aria-hidden="true" onerror="this.style.opacity='0'" />
+    </div>
+
+    <div class="card-content">
+
+      <!-- Illustration — centered -->
+      <div class="illustration">
+        <img src="images/Consultaion.webp" alt="Psychologist consultation illustration" />
+      </div>
+
+      <h1 class="headline">Kommer snart...</h1>
+      <p class="subtitle">Psykolog.no er for tiden under utvikling.</p>
+
+      <p class="body-text">
+        Vi arbeider med å skape en moderne og brukervennlig plattform som skal gjøre det enklere å
+        finne informasjon om psykisk helse og komme i kontakt med kvalifiserte psykologer.
+      </p>
+      <p class="body-text">
+        Vårt mål er å tilby pålitelig informasjon, profesjonell veiledning og en trygg digital
+        opplevelse for personer som søker støtte og hjelp innen psykisk helse.
+        Vi ser frem til å lansere nettstedet snart.
+      </p>
+
+      <p class="interim-link">I mellomtiden kan du besøke vår nåværende tjeneste på:</p>
+
+      <a class="cta-btn" href="https://www.psyklister.no" target="_blank" rel="noopener">
+        www.psyklister.no
+      </a>
+
+      <!-- Brand image — properly sized & centered -->
+      <div class="brand">
+        <img src="images/Pyskolog.webp" alt="Psykolog.no" />
+      </div>
+
+      <!-- Socials -->
+      <nav class="socials" aria-label="Social media links">
+
+        <a class="social-icon" href="https://www.youtube.com/@Psykolog-no" aria-label="YouTube">
+          <img src="images/social-youtube.svg" alt="" aria-hidden="true" />
+        </a>
+      
+        <a class="social-icon" href="#" aria-label="TikTok">
+          <img src="images/social-tiktok.svg" alt="" aria-hidden="true" />
+        </a>
+      
+        <a class="social-icon" href="https://x.com/Psykologno" aria-label="X / Twitter">
+          <img src="images/social-x.svg" alt="" aria-hidden="true" />
+        </a>
+      
+        <a class="social-icon" href="#" aria-label="LinkedIn">
+          <img src="images/social-linkedin.svg" alt="" aria-hidden="true" />
+        </a>
+      
+        <a class="social-icon" href=" https://no.pinterest.com/Psykolog_no/" aria-label="Pinterest">
+          <img src="images/social-pinterest.svg" alt="" aria-hidden="true" />
+        </a>
+      
+        <a class="social-icon" href="https://www.instagram.com/psykolog.no/" aria-label="Instagram">
+          <img src="images/social-instagram.svg" alt="" aria-hidden="true" />
+        </a>
+      
+        <a class="social-icon" href=" https://www.facebook.com/psykolog.norge " aria-label="Snapchat">
+          <img src="images/social-facebook.svg" alt="" aria-hidden="true" />
+        </a>
+      
+        <a class="social-icon" href=" https://www.quora.com/profile/Psykolog" aria-label="Quora">
+          <img src="images/social-quora.svg" alt="" aria-hidden="true" />
+        </a>
+      
+        <a class="social-icon" href="https://www.reddit.com/user/Psykolog_no/" aria-label="reddit">
+          <img src="images/social-reddit.svg" alt="" aria-hidden="true" />
+        </a>
+      
+      </nav>
+
+    </div>
+
+    <!-- BOTTOM LEAF IMAGE — src="images/Bottom-leafs.webp" -->
+    <div class="leaf-bottom">
+      <img src="images/Bottom-leafs.webp" alt="" aria-hidden="true" onerror="this.style.opacity='0'" />
+    </div>
+
+  </div>
+
+</body>
+</html>
