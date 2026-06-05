@@ -25,37 +25,24 @@
     }
 
     .card {
+      min-height: 100vh;
       width: 100%;
       background: linear-gradient(135.46deg, #F2E6D6 0%, #EFC9B8 100%);
-      overflow: hidden;
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
     }
 
-    /* Desktop: fixed 100vh so leaves stay pinned */
-    @media (min-height: 600px) {
-      .card {
-        min-height: 100vh;
-      }
-      .card-content {
-        flex: 1;
-      }
+    .card-content {
+      flex: 1;
+      max-width: 800px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
     }
 
-    /* Shorter screens / mobile: natural height, content scrolls */
-    @media (max-height: 599px) {
-      .card {
-        height: 100%;
-        min-height: 100vh;
-      }
-      .card-content {
-        flex: none;
-      }
-    }
-
-    /* ── TOP LEAF IMAGE SLOT ── */
     .leaf-top {
       width: 100%;
       height: 120px;
@@ -65,16 +52,13 @@
     }
     .leaf-top img {
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
       object-fit: cover;
       object-position: top center;
       display: block;
     }
 
-    /* ── BOTTOM LEAF IMAGE SLOT ── */
     .leaf-bottom {
       width: 100%;
       height: 120px;
@@ -84,25 +68,13 @@
     }
     .leaf-bottom img {
       position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      bottom: 0; left: 0;
+      width: 100%; height: 100%;
       object-fit: cover;
       object-position: bottom center;
       display: block;
     }
 
-    /* ── MAIN CONTENT ── */
-    .card-content {
-      max-width: 800px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-    }
-
-    /* ── ILLUSTRATION ── */
     .illustration {
       width: 100%;
       display: flex;
@@ -171,7 +143,6 @@
       color: #fff;
     }
 
-    /* ── BRAND IMAGE ── */
     .brand {
       display: flex;
       justify-content: center;
@@ -198,57 +169,38 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #D88B72;
-      font-size: 15px;
       cursor: pointer;
       transition: border-color 0.2s, background 0.2s;
       background: transparent;
       text-decoration: none;
     }
-
     .social-icon img {
       width: 60px;
       height: 60px;
       object-fit: contain;
       display: block;
     }
-
     .social-icon:hover {
       background: rgba(180, 90, 50, 0.12);
       border-color: rgba(180, 90, 50, 0.6);
     }
 
-    /* ── RESPONSIVE ── */
     @media (max-width: 600px) {
-      .card-content { padding: 10px 20px 10px; }
+      .card-content { padding: 10px 20px; }
       .illustration img { width: 280px; }
       .leaf-top, .leaf-bottom { height: 80px; }
-      .social-icon img {
-        width: 30px;
-        height: 30px;
-        object-fit: contain;
-        display: block;
-      }
-      .brand img {
-        height: 40px;
-        width: auto;
-        object-fit: contain;
-        display: block;
-      }
-      .interim-link {
-        font-size: 16px;
-      }
+      .social-icon img { width: 30px; height: 30px; }
+      .brand img { height: 40px; }
+      .interim-link { font-size: 16px; }
     }
     @media (max-width: 380px) {
       .leaf-top, .leaf-bottom { height: 65px; }
       .illustration img { width: 220px; }
       .socials { gap: 7px; }
-      .social-icon { width: 32px; height: 32px; font-size: 13px; }
     }
   </style>
 </head>
 <body>
-
   <div class="card">
 
     <div class="leaf-top">
@@ -277,7 +229,7 @@
       <p class="interim-link">I mellomtiden kan du besøke vår nåværende tjeneste på:</p>
 
       <a class="cta-btn" href="https://www.psykiater.no" target="_blank" rel="noopener">
-      Psykiater.no
+        Psykiater.no
       </a>
 
       <div class="brand">
@@ -285,31 +237,31 @@
       </div>
 
       <nav class="socials" aria-label="Social media links">
-        <a class="social-icon" href="https://www.youtube.com/@Psykolog-no" aria-label="YouTube">
+        <a class="social-icon" href="https://www.youtube.com/@Psykolog-no" target="_blank" rel="noopener" aria-label="YouTube">
           <img src="images/social-youtube.svg" alt="" aria-hidden="true" />
         </a>
-        <a class="social-icon" href="https://www.tiktok.com/@psykolog_no" aria-label="TikTok">
+        <a class="social-icon" href="https://www.tiktok.com/@psykolog_no" target="_blank" rel="noopener" aria-label="TikTok">
           <img src="images/social-tiktok.svg" alt="" aria-hidden="true" />
         </a>
-        <a class="social-icon" href="https://x.com/Psykologno" aria-label="X / Twitter">
+        <a class="social-icon" href="https://x.com/Psykologno" target="_blank" rel="noopener" aria-label="X / Twitter">
           <img src="images/social-x.svg" alt="" aria-hidden="true" />
         </a>
-        <a class="social-icon" href="#" aria-label="LinkedIn">
+        <a class="social-icon" href="#" target="_blank" rel="noopener" aria-label="LinkedIn">
           <img src="images/social-linkedin.svg" alt="" aria-hidden="true" />
         </a>
-        <a class="social-icon" href="https://no.pinterest.com/Psykolog_no/" aria-label="Pinterest">
+        <a class="social-icon" href="https://no.pinterest.com/Psykolog_no/" target="_blank" rel="noopener" aria-label="Pinterest">
           <img src="images/social-pinterest.svg" alt="" aria-hidden="true" />
         </a>
-        <a class="social-icon" href="https://www.instagram.com/psykolog.no/" aria-label="Instagram">
+        <a class="social-icon" href="https://www.instagram.com/psykolog.no/" target="_blank" rel="noopener" aria-label="Instagram">
           <img src="images/social-instagram.svg" alt="" aria-hidden="true" />
         </a>
-        <a class="social-icon" href="https://www.facebook.com/psykolog.norge" aria-label="Facebook">
+        <a class="social-icon" href="https://www.facebook.com/psykolog.norge" target="_blank" rel="noopener" aria-label="Facebook">
           <img src="images/social-facebook.svg" alt="" aria-hidden="true" />
         </a>
-        <a class="social-icon" href="https://www.quora.com/profile/Psykolog" aria-label="Quora">
+        <a class="social-icon" href="https://www.quora.com/profile/Psykolog" target="_blank" rel="noopener" aria-label="Quora">
           <img src="images/social-quora.svg" alt="" aria-hidden="true" />
         </a>
-        <a class="social-icon" href="https://www.reddit.com/user/Psykolog_no/" aria-label="Reddit">
+        <a class="social-icon" href="https://www.reddit.com/user/Psykolog_no/" target="_blank" rel="noopener" aria-label="Reddit">
           <img src="images/social-reddit.svg" alt="" aria-hidden="true" />
         </a>
       </nav>
@@ -321,6 +273,5 @@
     </div>
 
   </div>
-
 </body>
 </html>
