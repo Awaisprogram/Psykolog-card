@@ -282,6 +282,10 @@ h4 {
   color: var(--primary);
 }
 
+.nav__btn{
+  display: block;
+}
+
 .burger {
   display: none;
   width: 44px;
@@ -723,12 +727,14 @@ h4 {
 .cond__cloud {
   display: flex;
   flex-wrap: wrap;
+  margin-top:28px;
   gap: 11px;
 }
 .chip {
   display: inline-flex;
   align-items: center;
   gap: 9px;
+  
   padding: 11px 18px;
   border-radius: 999px;
   background: #fff;
@@ -1761,6 +1767,9 @@ html.rv-anim [data-rv] {
    ============================================================ */
 @media (max-width: 1080px) {
   .nav__links {
+    display: none;
+  }
+  .nav__btn{
     display: none;
   }
   .burger {
