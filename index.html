@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>psykolog.no — Warm, human psychological care</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============================================================
+     NAV
+     ============================================================ -->
+<header class="nav" id="nav">
+  <div class="wrap nav__in">
+
+    <a class="brand" href="#top">
+      <span class="brand__mk">✦</span>psykolog<span>.no</span>
+    </a>
+
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#conditions">What we treat</a>
+      <a href="#team">Psychologists</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+
+    <div class="nav__right">
+      <a class="nav__phone" href="tel:+4733998877">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1A19.5 19.5 0 0 1 5 12.7 19.8 19.8 0 0 1 1.9 4 2 2 0 0 1 3.9 2h3a2 2 0 0 1 2 1.7c.1 1 .3 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/>
+        </svg>
+        33 99 88 77
+      </a>
+      <a href="#pricing" class="btn btn-primary btn-sm">Book appointment</a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16"/>
+        </svg>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+<!-- ============================================================
+     MOBILE DRAWER
+     ============================================================ -->
+<div class="drawer" id="drawer" role="dialog" aria-label="Navigation menu">
+  <div class="drawer__sc" data-close></div>
+  <div class="drawer__panel">
+    <button class="drawer__x" data-close aria-label="Close menu">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+        <path d="M6 6l12 12M18 6L6 18"/>
+      </svg>
+    </button>
+    <a href="#about"      data-close>About</a>
+    <a href="#services"   data-close>Services</a>
+    <a href="#conditions" data-close>What we treat</a>
+    <a href="#team"       data-close>Psychologists</a>
+    <a href="#pricing"    data-close>Pricing</a>
+    <a href="#faq"        data-close>FAQ</a>
+    <a href="#pricing" class="btn btn-primary" data-close>Book appointment</a>
+  </div>
+</div>
+
+<!-- ============================================================
+     MAIN
+     ============================================================ -->
+<main id="top">
+
+  <!-- HERO --------------------------------------------------- -->
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="wrap">
+      <div class="hero__card">
+
+        <img
+          src="images/A warm, supportive conversation between a psychologist and a patient.webp"
+          alt="A warm, supportive conversation between a psychologist and a patient"
+        >
+        <div class="hero__scrim" aria-hidden="true"></div>
+
+        <div class="hero__body">
+          <span class="hero__badge">
+            <span class="d" aria-hidden="true"></span>
+            No referral · short waiting time
+          </span>
+          <h1 id="hero-heading">
+            Private Psychologist
+             
+            <em>Online<svg viewBox="0 0 300 14" preserveAspectRatio="none" fill="none" aria-hidden="true"><path d="M3 9c40-6 90-7 140-5s110 6 154 2" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></svg></em>
+          </h1>
+          <p class="hero__lead">
+            Your mental well-being deserves timely, professional attention. At psykolog.no, you can find a private psychologist with no referral from your GP and no long waiting lists. Whether you are dealing with anxiety, depression, burnout, or everyday stress, our team of experienced psychologists is here for you..
+          </p>
+          <div class="hero__cta">
+            <a href="#pricing" class="btn btn-primary">
+              Book an appointment
+              <svg class="arr" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="#services" class="btn btn-light">What we offer</a>
+          </div>
+        </div>
+
+        <!-- Floating info cards -->
+        <div class="hero__float" aria-hidden="true">
+          <div class="fcard">
+            <span class="fcard__ic">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z"/><path d="M8.5 12l2.3 2.3L15.5 9.5"/></svg>
+            </span>
+            <div>
+              <strong>Licensed in Norway</strong>
+              <span>Members of the Norwegian Psychological Association</span>
+            </div>
+          </div>
+          <div class="fcard">
+            <span class="fcard__ic">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2.5"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>
+            </span>
+            <div>
+              <strong>Day, evening &amp; weekend</strong>
+              <span>Online, phone, or in person</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+ 
+
+  <!-- ABOUT -------------------------------------------------- -->
+  <section class="sec" id="about" aria-labelledby="about-heading">
+    <div class="wrap about">
+
+      <div class="about__media" data-rv>
+        <img
+          src="images/Online Psychologist help with a short meeting time.webp"
+          alt="A psychologist listening attentively"
+        >
+        <div class="about__badge">
+          <div class="row">
+            <img src="https://i.pravatar.cc/80?img=5"  alt="">
+            <img src="https://i.pravatar.cc/80?img=12" alt="">
+            <img src="https://i.pravatar.cc/80?img=20" alt="">
+          </div>
+          <div>
+            <strong>Licensed psychologists</strong>
+            <span>Across all of Norway</span>
+          </div>
+        </div>
+      </div>
+
+      <div data-rv>
+        <span class="eyebrow">Who we are</span>
+        <h2 id="about-heading">Online Psychologist help
+           <em>with a short meeting time.</em></h2>
+        <p class="sec__sub">
+          Psykologi is the science of the mind and human behaviour. We believe that every person deserves fast, affordable access to a licensed online psychologist. 
+        </p>
+
+        <p class="sec__sub">
+          Our platform connects you with experienced psychologists who specialise in a wide range of mental health areas. Whether you prefer to speak with a psychologist from the comfort of your home or visit our clinic.
+        </p>
+
+        <p class="sec__sub">
+          Sessions are available during the day, evening, and weekends, so you can always find a time that fits your life.
+        </p>
+        
+        <a href="#services" class="btn btn-primary about-button">
+          See what we offer
+          <svg class="arr" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONDITIONS --------------------------------------------- -->
+  <section class="sec" id="conditions" aria-labelledby="conditions-heading">
+    <div class="wrap">
+      <div class="" data-rv>
+        <span class="eyebrow">What we treat</span>
+        <h2 id="conditions-heading">Mental Health Conditions <em>Our Psychologists Treat.</em></h2>
+        <p class="sec__sub">
+          Our psychologist has broad expertise across all common mental health conditions. Whether you are facing anxiety for the first time or have lived with depression for years, we have a psychologist specialist who can help.
+        </p>
+      </div>
+      <div data-rv>
+        <label class="cond__search">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+          <input id="condSearch" type="search" placeholder="Search a condition — e.g. anxiety, ADHD, grief" aria-label="Search conditions">
+        </label>
+        <div class="cond__cloud" id="condCloud" role="list"></div>
+        <p class="cond__empty" id="condEmpty" style="display:none">
+          No match — we treat many more areas.
+          <a href="#pricing" style="color:var(--primary-dk);font-weight:600">Reach out</a> and we'll guide you.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- THERAPIES ---------------------------------------------- -->
+  <section class="sec" id="therapies" aria-labelledby="therapies-heading" style="padding-top:0">
+    <div class="wrap">
+      <div class="ther" data-rv>
+        <div class="ther__head">
+          <div>
+            <span class="eyebrow" style="color:#ffd9c4">How we help</span>
+            <h2 id="therapies-heading" style="margin-top:12px">Psychological <em>therapies.</em></h2>
+          </div>
+          <p class="ther__sub">
+            Our psychologists draw on a broad range of recognised methods — choosing the approach,
+            or blend of approaches, that fits you best.
+          </p>
+        </div>
+        <!-- Populated by JS -->
+        <div class="ther__grid" id="therGrid"></div>
+        <div class="ther__note">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.6 5L19 9.6 13.6 11 12 16l-1.6-5L5 9.6 10.4 8z"/></svg>
+          Not sure which is right for you? Your psychologist will recommend an approach in your first session.
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+
+  <!-- SERVICES ----------------------------------------------- -->
+  <section class="sec services" id="services" aria-labelledby="services-heading">
+    <div class="wrap">
+
+      <div class="sec__head center" data-rv>
+        <span class="eyebrow" style="margin:0 auto">How it works</span>
+        <h2 id="services-heading">A psychologist without a referral, <em>in three steps.</em></h2>
+        <p class="sec__sub">
+          Our experienced psychologists provide compassionate care that fits your life —
+          online, by phone or in person.
+        </p>
+      </div>
+
+      <div style="margin-top:40px">
+
+        <!-- Step 1 -->
+        <div class="srow" data-rv>
+          <div class="srow__media">
+            <img
+              src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=800&q=80&fit=crop"
+              alt="Browsing psychologist profiles"
+            >
+          </div>
+          <div>
+            <div class="srow__ic">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+            </div>
+            <h3>1 · Choose a psychologist</h3>
+            <p>Find a psychologist who matches your needs. Read about their experience, specialisation and treatment areas — then pick the one who feels right.</p>
+          
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="srow flip" data-rv>
+          <div class="srow__media">
+            <img
+              src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&q=80&fit=crop"
+              alt="Booking an appointment online"
+            >
+          </div>
+          <div>
+            <div class="srow__ic">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2.5"/><path d="M8 3v4M16 3v4M3 10h18M9 15l2 2 4-4"/></svg>
+            </div>
+            <h3>2 · Book an appointment</h3>
+            <p>Choose a time that suits you — day, evening or weekend. You can easily book a psychologist online, with no referral required and a short waiting time.</p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="srow" data-rv>
+          <div class="srow__media">
+            <img
+              src="https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?w=800&q=80&fit=crop"
+              alt="A calm follow-up therapy session"
+            >
+          </div>
+          <div>
+            <div class="srow__ic">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.5-9.5-9C.8 8.5 3 4 7 4c2 0 3.5 1 5 3 1.5-2 3-3 5-3 4 0 6.2 4.5 4.5 8-2.5 4.5-9.5 9-9.5 9z"/></svg>
+            </div>
+            <h3>3 · Speak &amp; follow up</h3>
+            <p>Speak with an experienced psychologist online or in person. Receive professional support tailored to your needs, with continued follow-up afterwards.</p>
+           
+            <a href="#pricing" class="btn btn-primary btn-sm">
+              Book a session
+              <svg class="arr" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  
+
+ 
+
+  <!-- TEAM --------------------------------------------------- -->
+  <section class="sec" id="team" aria-labelledby="team-heading" style="padding-top:48px;">
+    <div class="wrap">
+  
+      <div class="team__header" data-rv>
+        <div class="team__header-left">
+          <span class="eyebrow">Our values</span>
+          <h2 id="team-heading">Our <em>Psychologist</em></h2>
+        </div>
+        <a href="#" class="team__see-all">See all specialist <span>→</span></a>
+      </div>
+  
+      <!-- Team grid — image-overlay style -->
+      <div class="team__grid" data-rv>
+        <article class="pcard">
+          <div class="pcard__ph">
+            <img src="https://i.pravatar.cc/300?img=47" alt="Elizabeth Martin">
+            <span class="pcard__loc">Oslo</span>
+            <a href="#" class="pcard__arrow" aria-label="View profile">↗</a>
+            <div class="pcard__overlay">
+              <span class="pcard__role">Senior Psychiatrist</span>
+              <h4>Elizabeth Martin</h4>
+              <div class="pcard__tags"><span>ANXIETY</span><span>DEPRESSION</span></div>
+            </div>
+          </div>
+        </article>
+        <article class="pcard">
+          <div class="pcard__ph">
+            <img src="https://i.pravatar.cc/300?img=65" alt="Max Smith">
+            <span class="pcard__loc">Ski</span>
+            <a href="#" class="pcard__arrow" aria-label="View profile">↗</a>
+            <div class="pcard__overlay">
+              <span class="pcard__role">Addiction Specialist</span>
+              <h4>Max Smith</h4>
+              <div class="pcard__tags"><span>ALCOHOL</span><span>AFTERCARE</span></div>
+            </div>
+          </div>
+        </article>
+        <article class="pcard">
+          <div class="pcard__ph">
+            <img src="https://i.pravatar.cc/300?img=44" alt="Sofia Eriksen">
+            <span class="pcard__loc">Bergen</span>
+            <a href="#" class="pcard__arrow" aria-label="View profile">↗</a>
+            <div class="pcard__overlay">
+              <span class="pcard__role">Clinical Psychologist</span>
+              <h4>Sofia Eriksen</h4>
+              <div class="pcard__tags"><span>ADHD</span><span>CBT</span></div>
+            </div>
+          </div>
+        </article>
+        <article class="pcard">
+          <div class="pcard__ph">
+            <img src="https://i.pravatar.cc/300?img=57" alt="Jonas Berg">
+            <span class="pcard__loc">Oslo</span>
+            <a href="#" class="pcard__arrow" aria-label="View profile">↗</a>
+            <div class="pcard__overlay">
+              <span class="pcard__role">Psychiatrist · MD</span>
+              <h4>Jonas Berg</h4>
+              <div class="pcard__tags"><span>BIPOLAR</span><span>MEDICATION</span></div>
+            </div>
+          </div>
+        </article>
+      </div>
+  
+    </div>
+  </section>
+
+ 
+
+  <!-- PRICING ------------------------------------------------ -->
+  <section class="sec" id="pricing" aria-labelledby="pricing-heading">
+    <div class="wrap">
+  
+      <div class="pricing-heading center" data-rv>
+        <span class="eyebrow" style="margin:0 auto">Pricing</span>
+        <h2 id="pricing-heading">Check the price of <em>Psychologits</em></h2>
+        <p class="sec__sub">Below you will find our standard rates for all session types.</p>
+      </div>
+  
+      <div class="price__grid" data-rv>
+  
+        <!-- Card 1 — Featured -->
+        <article class="prc feat">
+          <div class="prc__photo">
+            <img src="images/Individual therapy.webp" alt="Individual therapy session">
+          </div>
+          <div class="prc__body">
+            <h3>Individual therapy</h3>
+            <div class="prc__amt">1,500 <small>NOK</small></div>
+            <div class="prc__per">per 45-minute session</div>
+            <a href="#book" class="btn btn-primary">
+              Book this
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </article>
+  
+        <!-- Card 2 -->
+        <article class="prc">
+          <div class="prc__photo">
+            <img src="images/Couple therapy.webp" alt="Couple therapy session">
+          </div>
+          <div class="prc__body">
+            <h3>Couple therapy</h3>
+            <div class="prc__amt">2,000 <small>NOK</small></div>
+            <div class="prc__per">per 45-minute session</div>
+            <a href="#book" class="btn btn-ghost">Book this</a>
+          </div>
+        </article>
+  
+      </div>
+  
+    </div>
+  </section>
+
+  <!-- LOCATIONS ---------------------------------------------- -->
+  <section class="sec" id="locations" aria-labelledby="locations-heading" style="padding-top:0">
+    <div class="wrap">
+      <div class="loc" data-rv>
+
+        <div class="loc__info">
+          <span class="eyebrow">Find a psychologist in Norway</span>
+          <h2 id="locations-heading" style="font-size:32px;margin-top:14px">
+            Online everywhere, <em>in person in Oslo &amp; Ski.</em>
+          </h2>
+
+          <div class="loc__tabs" id="locTabs" role="tablist">
+            <button class="on" data-loc="oslo" role="tab" aria-selected="true">Psykolog Oslo</button>
+            <button data-loc="ski" role="tab" aria-selected="false">Psykolog Ski</button>
+          </div>
+
+          <div class="loc__detail">
+            <div class="it">
+              <span class="ic">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s-7-7.6-7-13a7 7 0 1 1 14 0c0 5.4-7 13-7 13z"/><circle cx="12" cy="9" r="2.6"/></svg>
+              </span>
+              <div>
+                <strong id="locName">Psykolog Oslo</strong>
+                <span id="locAddr">Akersveien 1, 0177 Oslo</span>
+              </div>
+            </div>
+            <div class="it">
+              <span class="ic">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+              </span>
+              <div>
+                <strong>Opening hours</strong>
+                <span id="locHours">Mon–Fri 08–20 · Sat 10–16</span>
+              </div>
+            </div>
+          </div>
+
+          <ul class="loc__feats">
+            <li>
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4 4 10-10"/></svg>
+              Short waiting time — often within 48 hours
+            </li>
+            <li>
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4 4 10-10"/></svg>
+              Online, phone or in person — your choice
+            </li>
+            <li>
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4 4 10-10"/></svg>
+              Licensed psychologists across Norway
+            </li>
+          </ul>
+
+          <a href="#pricing" class="btn btn-primary" id="locBtn">
+            Book at Oslo
+            <svg class="arr" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+
+        <div class="loc__media">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d499.5660238904384!2d10.847241369687898!3d59.9443525984324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNTnCsDU2JzM5LjciTiAxMMKwNTAnNTIuNCJF!5e0!3m2!1sen!2s!4v1781087345014!5m2!1sen!2s"  
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+          
+          <span class="loc__pin">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s-7-7.6-7-13a7 7 0 1 1 14 0c0 5.4-7 13-7 13z"/><circle cx="12" cy="9" r="2.6"/></svg>
+            <span id="locPin">Oslo, Norway</span>
+          </span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTOMONIALS ---------------------------------------------------- -->
+  <section class="sec" id="testimonials" aria-labelledby="testimonials-heading">
+    <div class="wrap">
+  
+      <div class="sec__head" data-rv>
+        <span class="eyebrow">Testimonials</span>
+        <h2 id="testimonials-heading">Patient <em>Reviews</em></h2>
+      </div>
+  
+      <div class="testi__grid" data-rv>
+  
+        <article class="testi__card">
+          <img src="images/qoutes.svg" alt="" class="tcard__quote" aria-hidden="true">
+          <p class="tcard__text">I had been struggling with anxiety for two years before I finally found the courage to seek help. I booked my first session with a psychologist on psykolog.no on a Tuesday evening and had my first appointment by Thursday. Within six sessions of CBT, I had tools I had never had before. The process was simple, professional, and genuinely life-changing.</p>
+          <div class="tcard__foot">
+            <span class="tcard__who">Female · 34</span>
+            <img src="images/stars.svg" alt="5 stars" class="tcard__stars">
+          </div>
+        </article>
+  
+        <article class="testi__card">
+          <img src="images/qoutes.svg" alt="" class="tcard__quote" aria-hidden="true">
+          <p class="tcard__text">I was diagnosed with ADHD as an adult and struggled to find the right psychological support. My psychologist on psykolog.no specialised in adult ADHD and helped me build practical coping strategies that actually work for my brain. Booking was easy, the price was transparent, and the quality of care was outstanding.</p>
+          <div class="tcard__foot">
+            <span class="tcard__who">Male · 41</span>
+            <img src="images/stars.svg" alt="5 stars" class="tcard__stars">
+          </div>
+        </article>
+  
+      </div>
+  
+    </div>
+  </section>
+
+  <!-- CTA BAND ----------------------------------------------- -->
+  <section class="sec cta-banner" id="cta" aria-label="Book your first appointment">
+    <div class="wrap">
+      <div class="cta-banner__inner">
+  
+        <!-- decorative plus icons -->
+        <svg class="cta-banner__plus cta-banner__plus--tl" width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+          <rect x="17" y="0" width="6" height="40" rx="3" fill="var(--primary)" opacity=".18"/>
+          <rect x="0" y="17" width="40" height="6" rx="3" fill="var(--primary)" opacity=".18"/>
+        </svg>
+        <svg class="cta-banner__plus cta-banner__plus--bl" width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+          <rect x="11" y="0" width="6" height="28" rx="3" fill="var(--primary)" opacity=".25"/>
+          <rect x="0" y="11" width="28" height="6" rx="3" fill="var(--primary)" opacity=".25"/>
+        </svg>
+  
+        <!-- left: text -->
+        <div class="cta-banner__text">
+          <h2>Ready to Take the First Step?</h2>
+          <p class="sec__sub">Book your first session with psykolog.no. No referral. No waiting.</p>
+          <a href="#book" class="btn btn-primary">
+            Book your first appointment
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+  
+        <!-- right: calendar illustration -->
+        <div class="cta-banner__img" aria-hidden="true">
+          <img src="images/CTA.webp" alt="">
+        </div>
+  
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ ---------------------------------------------------- -->
+  <section class="sec" id="faq" aria-labelledby="faq-heading" style="padding-top:0">
+    <div class="wrap faq">
+
+      <div class="faq__aside" data-rv>
+        <span class="eyebrow">Good to know</span>
+        <h2 id="faq-heading" style="margin-top:14px">Frequently asked <em>questions.</em></h2>
+        <p class="sec__sub">Honest answers about our care, pricing and how we work.</p>
+        <div class="faq__help">
+          <strong>Still have questions?</strong>
+          <p>Our team usually replies within an hour during opening hours.</p>
+          <a href="tel:+4733998877" class="btn btn-light btn-sm">Contact us</a>
+        </div>
+      </div>
+
+      <!-- Populated by JS -->
+      <div class="faq__list" id="faqList" data-rv></div>
+
+    </div>
+  </section>
+
+    <!-- ARTICLES ---------------------------------------------------- -->
+
+  <section class="sec" id="articles" aria-labelledby="articles-heading">
+    <div class="wrap">
+  
+      <div class="articles__header" data-rv>
+        <div class="articles__header-left">
+          <span class="eyebrow">Articles &amp; Resources</span>
+          <h2 id="articles-heading">Most read <em>articles.</em></h2>
+        </div>
+        <a href="#" class="team__see-all">See all articles <span>→</span></a>
+      </div>
+  
+      <div class="articles__grid" data-rv>
+  
+        <article class="acard">
+          <div class="acard__ph">
+            <img src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=600&q=80" alt="Green leaves close up">
+            <span class="acard__cat">Depression</span>
+          </div>
+          <div class="acard__body">
+            <div class="acard__meta">
+              <span>April 16, 2026</span>
+              <span class="acard__dot"></span>
+              <span>6 min read</span>
+            </div>
+            <h3><a href="#">Recognising postpartum depression and finding the right care</a></h3>
+            <p>What to look out for, when to ask for help, and how a short conversation can change everything.</p>
+            <a href="#" class="acard__read">Read article →</a>
+          </div>
+        </article>
+  
+        <article class="acard">
+          <div class="acard__ph">
+            <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80" alt="Two hands reaching toward each other">
+            <span class="acard__cat">CBT</span>
+          </div>
+          <div class="acard__body">
+            <div class="acard__meta">
+              <span>April 12, 2026</span>
+              <span class="acard__dot"></span>
+              <span>4 min read</span>
+            </div>
+            <h3><a href="#">Cognitive behavioural therapy: a primer for first-timers</a></h3>
+            <p>A grounded look at how CBT works, what to expect, and how to choose a therapist who fits.</p>
+            <a href="#" class="acard__read">Read article →</a>
+          </div>
+        </article>
+  
+        <article class="acard">
+          <div class="acard__ph">
+            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&q=80" alt="People collaborating at a desk">
+            <span class="acard__cat">Wellbeing</span>
+          </div>
+          <div class="acard__body">
+            <div class="acard__meta">
+              <span>April 04, 2026</span>
+              <span class="acard__dot"></span>
+              <span>5 min read</span>
+            </div>
+            <h3><a href="#">Caring for children's mental health: what parents should know</a></h3>
+            <p>Practical guidance for parents recognising early signs and supporting their child's care.</p>
+            <a href="#" class="acard__read">Read article →</a>
+          </div>
+        </article>
+  
+      </div>
+  
+    </div>
+  </section>
+</main>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__top">
+      <div>
+        <a class="brand" href="#top">
+          <span class="brand__mk">✦</span>psykolog<span>.no</span>
+        </a>
+        <p>A private psychologist clinic offering fast, online and in-person mental health care across Norway — no referral, short waiting time.</p>
+        <address class="foot__contact">
+          <a href="tel:+4733998877">33 99 88 77</a>
+          <span>Akersveien 1, 0177 Oslo</span>
+        </address>
+      </div>
+      <div>
+        <h5>Care</h5>
+        <ul>
+          <li><a href="#conditions">What we treat</a></li>
+          <li><a href="#therapies">Therapies</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#locations">Clinics</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Clinic</h5>
+        <ul>
+          <li><a href="#services">How it works</a></li>
+          <li><a href="#team">Psychologists</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="#locations">Oslo clinic</a></li>
+          <li><a href="#locations">Ski clinic</a></li>
+          <li><a href="tel:+4733998877">Call us</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="foot__bot">
+      <span>© 2026 psykolog.no — All rights reserved.</span>
+      <span class="sig">psykolog.no</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="script.js"></script>
+
+</body>
+</html>
