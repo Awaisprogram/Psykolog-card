@@ -110,24 +110,14 @@
   /* ============================================================
      CONDITIONS CLOUD
      ============================================================ */
-  function initConditions() {
-    const cloud = document.getElementById('condCloud');
-    const empty = document.getElementById('condEmpty');
-    const input = document.getElementById('condSearch');
-    if (!cloud || !empty || !input) return;
-  
-    function render(q) {
-      q = (q || '').trim().toLowerCase();
-      const list = CONDS.filter(c => c.toLowerCase().includes(q));
-      cloud.innerHTML = list
+     function initConditions() {
+      const cloud = document.getElementById('condCloud');
+      if (!cloud) return;
+    
+      cloud.innerHTML = CONDS
         .map(c => `<a href="#pricing" class="chip"><span class="d"></span>${c}</a>`)
         .join('');
-      empty.style.display = list.length ? 'none' : 'block';
     }
-  
-    render();
-    input.addEventListener('input', e => render(e.target.value));
-  }
   
   /* ============================================================
      THERAPIES GRID
